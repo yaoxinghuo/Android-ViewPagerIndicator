@@ -14,13 +14,22 @@
      limitations under the License.
 -->
 
-<resources>
-    <style name="Theme.PageIndicatorDefaults" parent="@android:style/Theme.Holo.Light">
-        <item name="vpiCirclePageIndicatorStyle">@style/Widget.CirclePageIndicator</item>
-        <item name="vpiTitlePageIndicatorStyle">@style/Widget.TitlePageIndicator</item>
-        <item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator</item>
-        <item name="vpiTabTextStyle">@style/Widget.TabPageIndicator.Text</item>
-    </style>
-    
-    <style name="Widget" parent="@android:style/Widget.Holo.Light"></style>
-</resources>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <com.viewpagerindicator.IconPageIndicator
+        android:id="@+id/indicator"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        />
+
+</LinearLayout>
